@@ -4,17 +4,25 @@ export const titleOne = styled.h1`
   font-family: var(--font-secundary);
   font-size: var(--font-size-1);
   font-weight: var(--font-bold);
-  color: var(--color-grey-3);
+  color: var(--color-details);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
-export const titleTwo = styled.h2`
+export const textOne = css`
   font-family: var(--font-primary);
   font-weight: var(--font-medium);
   font-size: var(--font-size-3);
   color: var(--color-grey-3);
 `;
 
-export const labelText = styled.label`
+export const textLocation = styled.p`
+  font-family: var(--font-secundary);
+  font-weight: var(--font-medium);
+  font-size: var(--font-size-4);
+  color: var(--color-white);
+`;
+
+export const textOption = styled.option`
   font-family: var(--font-primary);
   font-size: var(--font-size-2);
   font-weight: var(--font-semibold);
@@ -28,4 +36,26 @@ export const placeHolderText = css`
     font-weight: var(--font-light);
     color: var(--color-grey-3);
   }
+`;
+
+export interface textButtonProps {
+  textButtonStyle: 'finishOrder' | 'openClose';
+}
+
+export const textButton = css<textButtonProps>`
+  font-size: var(--font-size-3);
+  font-family: var(--font-secundary);
+  font-weight: var(--font-bold);
+  ${({ textButtonStyle }) => {
+    switch (textButtonStyle) {
+      case 'finishOrder':
+        return css`
+          color: var(--color-details);
+        `;
+      case 'openClose':
+        return css`
+          color: var(--color-grey-3);
+        `;
+    }
+  }}
 `;
