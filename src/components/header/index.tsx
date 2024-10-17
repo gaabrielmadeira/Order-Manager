@@ -1,10 +1,27 @@
-import logoCart from '../../assets/cart.svg';
+import {
+  StyledCart,
+  StyledCounter,
+  StyledHeader,
+  StyledSearch,
+  StyledSearchDiv,
+} from './style';
+import { IoSearchSharp } from 'react-icons/io5';
+import { IoCartOutline } from 'react-icons/io5';
+import { TextTwo } from '../../styles/typograph';
 
 export const Header = () => {
   return (
-    <header>
-      <input type="text" placeholder="Procure pelo seu lanche" />
-      <img src={logoCart} alt="Logo do carrinho de compras" />
-    </header>
+    <StyledHeader>
+      <StyledSearchDiv>
+        <StyledSearch type="text" placeholder="Procure pelo seu lanche..." />
+        <IoSearchSharp style={{ width: '20px', height: '20px' }} />
+      </StyledSearchDiv>
+      <StyledCart>
+        <StyledCounter>
+          <TextTwo>0</TextTwo>
+        </StyledCounter>
+        <IoCartOutline style={{ width: '30px', height: '30px' }} />
+      </StyledCart>
+    </StyledHeader>
   );
 };

@@ -1,15 +1,15 @@
-import { css } from 'styled-components';
-import { textButton, textButtonProps } from './typograph';
+import styled, { css } from 'styled-components';
+import { TextButton, textButtonProps } from './typograph';
 
-interface openCloseButtonProps extends textButtonProps {
+interface ButtonProps extends textButtonProps {
   buttonStyle: 'open' | 'close' | 'order';
 }
 
-export const StyledOpenCloseButton = css<openCloseButtonProps>`
+export const StyledButtons = css<ButtonProps>`
   width: 167px;
   height: 40px;
   border-radius: 8px;
-  ${textButton}
+  ${TextButton}
   ${({ buttonStyle }) => {
     switch (buttonStyle) {
       case 'open':
@@ -27,4 +27,12 @@ export const StyledOpenCloseButton = css<openCloseButtonProps>`
         `;
     }
   }}
+`;
+
+export const StyledOpenCloseButton = styled.span<ButtonProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ${StyledButtons}
 `;

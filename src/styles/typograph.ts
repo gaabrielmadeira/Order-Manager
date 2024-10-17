@@ -1,6 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { css } from 'styled-components';
 
-export const titleOne = styled.h1`
+export const TitleOne = styled.h1`
   font-family: var(--font-secundary);
   font-size: var(--font-size-1);
   font-weight: var(--font-bold);
@@ -8,28 +9,28 @@ export const titleOne = styled.h1`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
-export const textOne = css`
+export const TextOne = css`
   font-family: var(--font-primary);
   font-weight: var(--font-medium);
   font-size: var(--font-size-3);
   color: var(--color-grey-3);
 `;
 
-export const textLocation = styled.p`
+export const TextTwo = styled.p`
   font-family: var(--font-secundary);
   font-weight: var(--font-medium);
   font-size: var(--font-size-4);
   color: var(--color-white);
 `;
 
-export const textOption = styled.option`
+export const TextOption = styled.option`
   font-family: var(--font-primary);
   font-size: var(--font-size-2);
   font-weight: var(--font-semibold);
   color: var(--color-grey-3);
 `;
 
-export const placeHolderText = css`
+export const PlaceHolderText = css`
   &::placeholder {
     font-family: var(--font-primary);
     font-size: var(--font-size-4);
@@ -42,7 +43,7 @@ export interface textButtonProps {
   textButtonStyle: 'finishOrder' | 'openClose';
 }
 
-export const textButton = css<textButtonProps>`
+export const TextButton = css<textButtonProps>`
   font-size: var(--font-size-3);
   font-family: var(--font-secundary);
   font-weight: var(--font-bold);

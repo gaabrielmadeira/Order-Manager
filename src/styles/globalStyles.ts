@@ -13,10 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     --font-primary: "Inter", sans-serif;
     --font-secundary: "Poppins", sans-serif;
 
-    --font-size-1: 24px;
-    --font-size-2: 18px;
-    --font-size-3: 14px;
-    --font-size-4: 10px;
+    --font-size-1: 1.5rem;
+    --font-size-2: 1.125rem;
+    --font-size-3: 0.875rem;
+    --font-size-4: 0.75rem;
 
     --font-bold: 700;
     --font-semibold: 600;
