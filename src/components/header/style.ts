@@ -33,23 +33,3 @@ export const StyledSearch = styled.input`
 
   ${PlaceHolderText}
 `;
-
-export const StyledCart = styled.div`
-  width: 40px;
-  height: 40px;
-
-  position: absolute;
-  right: 10px;
-`;
-
-export const StyledCounter = styled.div`
-  width: 15px;
-  height: 15px;
-
-  background-color: var(--color-button-open);
-  border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
